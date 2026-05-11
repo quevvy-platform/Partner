@@ -40,7 +40,7 @@ const projectData = {
   name: "Quevvy",
   company: "Quevvy",
   tagline: "La révolution des invitations virtuelles sécurisées",
-  description: "Plateforme de création d'événements, d'invitations virtuelles, de cartes digitales et de tickets d'entrée sécurisés utilisant la technologie QR Code avancée.",
+  description: "Plateforme qui développe des produits numériques utiles, dont des solutions de création d'événements sécurisés et des outils no-code de création de sites web.",
   fullName: "GENTIL LE NOIR MALIYAMUNGU BALEGAMIRE",
 };
 
@@ -48,7 +48,7 @@ const projectData = {
 const contactInfo: ContactInfo = {
   whatsapp: ["+243978089552"],
   phoneNumbers: ["+250729606087", "+243978089552"],
-  emails: ["info@quevvy.com", "quevvy.platform@gmail.com"],
+  emails: ["info@quevvy.com", "sitex@quevvy.com", "quevvy.platform@gmail.com"],
   portfolioUrl: "https://gentil-lenoir.vercel.app/portfolio",
 };
 
@@ -505,7 +505,7 @@ ${formData.message}`;
               Le Projet <span className="highlight">Quevvy</span>
             </h2>
             <p className="section-subtitle">
-              Une solution innovante pour la gestion d'événements et d'invitations numériques sécurisées
+              Une plateforme innovante qui lance des produits numériques utiles pour les créateurs, les entreprises et les organisateurs
             </p>
           </div>
           
@@ -517,26 +517,36 @@ ${formData.message}`;
                 Qu'est-ce que Quevvy ?
               </h3>
               <p>
-                <strong>Quevvy</strong> est une plateforme innovatorice permettant la création d'événements 
-                virtuels et hybrides avec des invitations digitales sécurisées utilisant la technologie QR Code avancée. 
-                Contrairement aux solutions traditionnelles, nos invitations sont <strong>impossibles à copier ou falsifier</strong>, 
-                offrant un niveau de sécurité inégalé.
+                <strong>Quevvy</strong> est une plateforme innovatrice qui développe des produits numériques pratiques.
+                Son premier produit fonctionnel est <strong>SiteX Quevvy</strong>, une plateforme no-code de création
+                de sites web, facile à utiliser, gratuite et utilisable en illimité. En parallèle, Quevvy développe
+                aussi une solution de création d'événements virtuels et hybrides avec des invitations digitales
+                sécurisées par technologie QR Code avancée. Contrairement aux solutions traditionnelles, nos invitations
+                sont <strong>impossibles à copier ou falsifier</strong>, offrant un niveau de sécurité inégalé.
               </p>
               
               <div className="project-highlights">
                 <div className="highlight-item">
-                  <div className="highlight-icon blue"><FaBullseye /></div>
+                  <div className="highlight-icon blue"><FaGlobe /></div>
+                  <div className="highlight-content">
+                    <h4>Premier produit fonctionnel</h4>
+                    <p>SiteX Quevvy permet de créer des sites web no-code, facilement, gratuitement et sans limite sur <a href="https://sitex.quevvy.com" target="_blank" rel="noopener noreferrer">sitex.quevvy.com</a></p>
+                  </div>
+                </div>
+
+                <div className="highlight-item">
+                  <div className="highlight-icon purple"><FaBullseye /></div>
                   <div className="highlight-content">
                     <h4>Cible du marché</h4>
-                    <p>Tous organisateurs d'événements : mariages, anniversaires, conférences, lancements produits</p>
+                    <p>Créateurs, PME, startups et organisateurs d'événements : mariages, anniversaires, conférences, lancements produits</p>
                   </div>
                 </div>
                 
                 <div className="highlight-item">
-                  <div className="highlight-icon purple"><FaLightbulb /></div>
+                  <div className="highlight-icon orange"><FaLightbulb /></div>
                   <div className="highlight-content">
                     <h4>Innovation clé</h4>
-                    <p>QR Codes uniques avec système de détection de duplication en temps réel</p>
+                    <p>Deux axes forts : création web no-code accessible avec SiteX et invitations QR sécurisées avec détection de duplication en temps réel</p>
                   </div>
                 </div>
                 
@@ -558,6 +568,7 @@ ${formData.message}`;
               </div>
               
               <ul className="status-list">
+                <li><FaCheck /> SiteX Quevvy déjà fonctionnel et accessible en ligne</li>
                 <li><FaCheck /> Plateforme backend sécurisée</li>
                 <li><FaCheck /> Interface administrateur complète</li>
                 <li><FaCheck /> Système de génération de QR Codes</li>
@@ -660,11 +671,10 @@ ${formData.message}`;
               Technologie de Pointe
             </h3>
             <p style={{ textAlign: 'justify', lineHeight: '1.8', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto 2rem' }}>
-              <strong>Quevvy</strong> représente une innovation majeure dans le domaine de la gestion d'événements. 
-              Notre plateforme combine <strong>sécurité avancée</strong>, <strong>facilité d'utilisation</strong> et 
-              <strong> design moderne</strong> pour offrir une expérience unique. L'équipe possède une expertise 
-              approfondie en cryptographie et développement d'applications sécurisées. Nous avons développé un 
-              algorithme propriétaire de génération de QR Codes qui rend toute falsification impossible.
+              <strong>Quevvy</strong> construit des produits numériques modernes avec une approche orientée simplicité,
+              autonomie et sécurité. Avec <strong>SiteX Quevvy</strong>, nous rendons la création de sites web no-code
+              accessible à tous. Avec notre solution événementielle, nous combinons <strong>sécurité avancée</strong>,
+              <strong> facilité d'utilisation</strong> et <strong>design moderne</strong> pour offrir une expérience unique.
             </p>
             
             <div className="tech-stack">
@@ -890,6 +900,7 @@ ${formData.message}`;
                   <div className="contact-method-content">
                     <h4>Site Web</h4>
                     <a href="https://quevvy.com" target="_blank" rel="noopener noreferrer">Accueil</a>
+                    <a href="https://sitex.quevvy.com" target="_blank" rel="noopener noreferrer">SiteX Quevvy</a>
                     <a href="https://quevvy.com/register" target="_blank" rel="noopener noreferrer">S'inscrire</a>
                     <a href="https://quevvy.com/about" target="_blank" rel="noopener noreferrer">À propos</a>
                   </div>

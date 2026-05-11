@@ -878,6 +878,7 @@ a:hover {
 .highlight-icon.blue { background: rgba(59, 130, 246, 0.2); color: var(--primary-400); }
 .highlight-icon.purple { background: rgba(139, 92, 246, 0.2); color: var(--secondary-400); }
 .highlight-icon.green { background: rgba(16, 185, 129, 0.2); color: var(--success-500); }
+.highlight-icon.orange { background: rgba(245, 158, 11, 0.2); color: var(--warning-500); }
 
 .highlight-content h4 {
   font-size: 1.1rem;
