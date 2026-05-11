@@ -1,15 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import '../Css/Home.css';
 import Header from '../Components/Header';
 import { 
-  FaLock, FaCalendarAlt, FaMoneyBillWave, FaPalette, FaChartBar, FaGlobe, 
-  FaRocket, FaBullseye, FaLightbulb, FaChartLine, FaCheck, FaSync, 
+  FaCalendarAlt, FaMoneyBillWave, FaPalette, FaChartBar, FaGlobe,
+  FaRocket, FaBullseye, FaLightbulb, FaChartLine, FaCheck, FaSync,
   FaHandshake, FaBuilding, FaPhone, FaEnvelope, FaWhatsapp, FaCircle,
-  FaUserTie, FaPercent, FaCrown, FaExternalLinkAlt, FaLinkedin, FaFacebook,
-  FaArrowRight, FaPlay, FaAward, FaUsers, FaShieldAlt, FaClock, FaCheckCircle,
-  FaArrowUp, FaChartPie, FaQrcode, FaTicketAlt, FaBolt, FaStar, FaPaperPlane,
-  FaTwitter, FaPinterest, FaLaptopCode, FaMobileAlt, FaCloud, FaDatabase
+  FaCrown, FaExternalLinkAlt, FaLinkedin, FaFacebook, FaArrowRight,
+  FaShieldAlt, FaClock, FaCheckCircle, FaChartPie, FaQrcode, FaBolt,
+  FaPaperPlane, FaTwitter, FaPinterest
 } from 'react-icons/fa';
 
 // Types et interfaces
@@ -50,7 +48,7 @@ const projectData = {
 const contactInfo: ContactInfo = {
   whatsapp: ["+243978089552"],
   phoneNumbers: ["+250729606087", "+243978089552"],
-  emails: ["quevvy.platform@outlook.com", "quevvy.platform@gmail.com"],
+  emails: ["info@quevvy.com", "quevvy.platform@gmail.com"],
   portfolioUrl: "https://gentil-lenoir.vercel.app/portfolio",
 };
 
@@ -596,6 +594,7 @@ ${formData.message}`;
                 {galleryEvents.map(event => (
                   <a 
                     key={event.id} 
+                    href={event.externalUrl}
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="gallery-event-card"
@@ -1058,7 +1057,7 @@ ${formData.message}`;
               <h4 className="footer-title">Contactez-nous</h4>
               <div className="footer-contact-item">
                 <FaEnvelope />
-                <a href="mailto:quevvy.platform@outlook.com">quevvy.platform@outlook.com</a>
+                <a href="mailto:info@quevvy.com">info@quevvy.com</a>
               </div>
               <div className="footer-contact-item">
                 <FaWhatsapp />
