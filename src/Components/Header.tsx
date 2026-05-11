@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { FaRocket } from 'react-icons/fa';
-import { Navigate } from 'react-router';
+import React, { useEffect, useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 // Type pour les props optionnelles
 interface HeaderProps {
@@ -38,9 +37,14 @@ const Header: React.FC<HeaderProps> = ({
   activeSection = '', 
   setActiveSection = () => {}, 
   scrollToSection = defaultScrollToSection,
-  selectedTheme = 'dark',
   navItems = defaultNavItems
 }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [activeSection]);
+
   return (
     <nav className="main-nav">
       <div className="nav-container">
@@ -60,12 +64,23 @@ const Header: React.FC<HeaderProps> = ({
           </a>
         </div>
         
-        <ul className="nav-menu">
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+        >
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+        <ul className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
           {navItems.map((item) => (
             <li key={item.id}>
               <button 
                 className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
                 onClick={() => {
+                  setIsMenuOpen(false);
                   setActiveSection(item.id);
                   scrollToSection(item.id);
                 }}
@@ -91,4 +106,3 @@ const Header: React.FC<HeaderProps> = ({
 };
 
 export default Header;
-

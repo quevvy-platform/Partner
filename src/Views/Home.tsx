@@ -52,6 +52,16 @@ const contactInfo: ContactInfo = {
   portfolioUrl: "https://gentil-lenoir.vercel.app/portfolio",
 };
 
+const homeNavItems = [
+  { id: 'home', label: 'Accueil' },
+  { id: 'sitex', label: 'SiteX' },
+  { id: 'quevvy-product', label: 'Quevvy' },
+  { id: 'features', label: 'Fonctions' },
+  { id: 'roadmap', label: 'Roadmap' },
+  { id: 'investment', label: 'Investir' },
+  { id: 'contact', label: 'Contact' }
+];
+
 // Fonctionnalités principales
 const features: Feature[] = [
   {
@@ -253,6 +263,8 @@ const Home: React.FC = () => {
   // Refs for sections
   const heroRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
+  const sitexRef = useRef<HTMLDivElement>(null);
+  const quevvyProductRef = useRef<HTMLDivElement>(null);
   const roadmapRef = useRef<HTMLDivElement>(null);
   const investmentRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
@@ -284,7 +296,7 @@ const Home: React.FC = () => {
   // Scroll handler for active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'project', 'features', 'roadmap', 'investment', 'contact'];
+      const sections = ['home', 'sitex', 'quevvy-product', 'project', 'features', 'roadmap', 'investment', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -373,7 +385,7 @@ ${formData.message}`;
         activeSection={activeSection}
         setActiveSection={setActiveSection}
         scrollToSection={scrollToSection}
-        selectedTheme={selectedTheme}
+        navItems={homeNavItems}
       />
 
       {/* ==================== HERO SECTION ==================== */}
@@ -493,6 +505,112 @@ ${formData.message}`;
         <div className="hero-scroll">
           <span>Découvrir</span>
           <div className="hero-scroll-line"></div>
+        </div>
+      </section>
+
+      <section id="sitex" className="section product-section product-section-sitex" ref={sitexRef}>
+        <div className="section-container">
+          <div className="product-showcase">
+            <div className="product-visual-card">
+              <div className="product-visual-badge">Produit 01</div>
+              <img
+                src="/sitex/sitex.logo.png"
+                alt="Logo SiteX Quevvy"
+                className="product-logo"
+              />
+              <img
+                src="/sitex/sitex.icon.png"
+                alt="Icône SiteX Quevvy"
+                className="product-icon"
+              />
+            </div>
+
+            <div className="product-content">
+              <span className="section-badge">Produit Fonctionnel</span>
+              <h2 className="section-title">
+                <span className="highlight">SiteX Quevvy</span>
+              </h2>
+              <p className="product-description">
+                SiteX Quevvy est le premier produit fonctionnel de Quevvy Platform. C&apos;est une plateforme
+                de création de sites web <strong>no-code</strong>, pensée pour permettre à tout le monde de
+                créer facilement, gratuitement et sans limite.
+              </p>
+
+              <div className="product-points">
+                <div className="product-point"><FaCheck /> Création de sites web sans coder</div>
+                <div className="product-point"><FaCheck /> Utilisation simple et rapide</div>
+                <div className="product-point"><FaCheck /> Accès gratuit</div>
+                <div className="product-point"><FaCheck /> Création illimitée</div>
+              </div>
+
+              <div className="product-actions">
+                <a
+                  href="https://sitex.quevvy.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Visiter SiteX <FaArrowRight />
+                </a>
+                <a
+                  href="mailto:sitex@quevvy.com"
+                  className="btn btn-secondary"
+                >
+                  sitex@quevvy.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quevvy-product" className="section product-section product-section-quevvy" ref={quevvyProductRef}>
+        <div className="section-container">
+          <div className="product-showcase reverse">
+            <div className="product-content">
+              <span className="section-badge">Main Project</span>
+              <h2 className="section-title">
+                <span className="highlight">Quevvy</span>
+              </h2>
+              <p className="product-description">
+                Quevvy est la solution dédiée aux événements, invitations virtuelles, cartes digitales et tickets
+                d&apos;entrée sécurisés par QR Code. Elle aide les organisateurs à gérer leurs événements avec plus
+                de contrôle, plus de sécurité et une meilleure expérience utilisateur.
+              </p>
+
+              <div className="product-points">
+                <div className="product-point"><FaCheck /> Invitations virtuelles sécurisées</div>
+                <div className="product-point"><FaCheck /> QR Codes difficiles à falsifier</div>
+                <div className="product-point"><FaCheck /> Gestion d&apos;événements et RSVP</div>
+                <div className="product-point"><FaCheck /> Tickets et accès numériques</div>
+              </div>
+
+              <div className="product-actions">
+                <a
+                  href="https://quevvy.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Visiter Quevvy <FaArrowRight />
+                </a>
+              </div>
+            </div>
+
+            <div className="product-visual-card">
+              <div className="product-visual-badge">Main Project</div>
+              <img
+                src="/img/quevvy_logo_transparent.png"
+                alt="Logo Quevvy"
+                className="product-logo quevvy"
+              />
+              <img
+                src="/img/favicon.png"
+                alt="Icône Quevvy"
+                className="product-icon quevvy"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
